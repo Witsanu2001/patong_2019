@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'true-thai';
+    src: url('../fonts/ttmsp-webfont.eot');
+    src: url('../fonts/ttmsp-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ttmsp-webfont.woff2') format('woff2'),
+        url('../fonts/ttmsp-webfont.woff') format('woff'),
+        url('../fonts/ttmsp-webfont.ttf') format('truetype'),
+        url('../fonts/ttmsp-webfont.svg#true-thaimedium_spregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div#i_containTab{
+	position:relative;
+	display:block;
+	width:540px; /* กำหนดความกว้างทั้งหมด   */
+	/*border:1px solid #CCC;*/
+}
+ul#navi_containTab{
+	list-style:none;
+	padding:0;
+	margin:0;	
+	width:100%;
+	margin-left:0px;
+	height:30px;
+}
+ul#navi_containTab li.active{
+	display:block;
+	float:left;
+	height:30px;	
+	padding-left:15px;
+	padding-right:15px;
+	  /* กำหนดความกว้างทั้งหมด  หารด้วยจำนวนเมนูแท็บ  */
+	/*border:0px solid #CCC;*/
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	/*border-top-left-radius:5px;
+	border-top-right-radius:5px;*/
+	background: #eef0f0;
+	margin-right:5px;
+	color: #333;
+	font-size:20px;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	font-family:true-thai;
+	/*text-shadow: #999 1px 1px 0px;*/
+	}
+ul#navi_containTab li{
+	display:block;
+	float:left;
+	height:30px;	
+	padding-left:15px;
+	padding-right:15px;  /* กำหนดความกว้างทั้งหมด  หารด้วยจำนวนเมนูแท็บ  */
+	/*border:0px solid #CCC;*/
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	/*border-top-left-radius:5px;
+	border-top-right-radius:5px;*/
+	background: #1896d3;
+	margin-right:5px;
+	
+	color:#fff;
+	font-size:20px;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	font-family:true-thai;
+	/*text-shadow: #999 1px 1px 0px;*/
+}
+ul#navi_containTab li:hover{
+	border-top: #47aadd 3px solid;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+	}
+	
+
+/* class รูปแบบของแต่ละเมนู */
+#navi_containTab .tabNavi1{
+	/*background-color:#fde3c4;	*/
+}
+#navi_containTab .tabNavi2{
+	/*background-color:#fee8cc;	*/	
+}
+
+
+ul#detail_containTab{
+	list-style:none;
+	padding:0;
+	margin:0;	
+	width:100%;	
+}
+ul#detail_containTab li{
+	float:left;
+	width:100%;
+	padding:5px;
+	/*border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius:10px;
+	border-top-left-radius: 10px;*/
+}
+ul#detail_containTab li a{color: ;}
+ul#detail_containTab li a:hover{color:#333;}
+ul#detail_containTab li img{border:none; margin:0px;}
+/* class รูปแบบของแต่ละเนื้อหา */
+ul#detail_containTab .detailContent1{
+background: #eef0f0;
+	display:block;
+}
+ul#detail_containTab .detailContent2{
+background: #eef0f0;
+	display:none;
+}
+
+/*************************************/
+
+div#i_containTab2{
+	position:relative;
+	display:block;
+	width:540px; /* กำหนดความกว้างทั้งหมด   */
+	/*border:1px solid #CCC;*/
+}
+ul#navi_containTab2{
+	list-style:none;
+	padding:0;
+	margin:0;	
+	width:100%;
+	margin-left:0px;
+	height:30px;
+}
+ul#navi_containTab2 li.active{
+		display:block;
+	float:left;
+	height:30px;	
+	padding-left:15px;
+	padding-right:15px;  /* กำหนดความกว้างทั้งหมด  หารด้วยจำนวนเมนูแท็บ  */
+	/*border:0px solid #CCC;*/
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	/*border-top-left-radius:5px;
+	border-top-right-radius:5px;*/
+	background: #eef0f0;
+	margin-right:5px;
+	color: #333;
+	font-size:20px;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	font-family:true-thai;
+	/*text-shadow: #999 1px 1px 0px;*/
+	}
+ul#navi_containTab2 li{
+	display:block;
+	float:left;
+	height:30px;	
+	padding-left:15px;
+	padding-right:15px;  /* กำหนดความกว้างทั้งหมด  หารด้วยจำนวนเมนูแท็บ  */
+	/*border:0px solid #CCC;*/
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	/*border-top-left-radius:5px;
+	border-top-right-radius:5px;*/
+	background: #1896d3;
+	margin-right:5px;
+	
+	color:#fff;
+	font-size:20px;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	font-family:true-thai;
+	/*text-shadow: #999 1px 1px 0px;*/
+}
+ul#navi_containTab2 li:hover{
+	border-top: #47aadd 3px solid;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+	}
+	
+
+/* class รูปแบบของแต่ละเมนู */
+#navi_containTab2 .tabNavi1{
+	/*background-color:#fde3c4;	*/
+}
+#navi_containTab2 .tabNavi2{
+	/*background-color:#fee8cc;	*/	
+}
+
+
+ul#detail_containTab2{
+	list-style:none;
+	padding:0;
+	margin:0;	
+	width:100%;	
+}
+ul#detail_containTab2 li{
+	float:left;
+	width:100%;
+	padding:5px;
+	/*border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius:10px;
+	border-top-left-radius: 10px;*/
+}
+ul#detail_containTab2 li a{color: ;}
+ul#detail_containTab2 li a:hover{color:#333;}
+ul#detail_containTab2 li img{border:none; margin:0px;}
+/* class รูปแบบของแต่ละเนื้อหา */
+ul#detail_containTab2 .detailContent1{
+background: #eef0f0;
+	display:block;
+}
+ul#detail_containTab2 .detailContent2{
+background: #eef0f0;
+	display:none;
+}
+
+/*************************************/
+
+div#i_containTab3{
+	position:relative;
+	display:block;
+	width:540px; /* กำหนดความกว้างทั้งหมด   */
+	/*border:1px solid #CCC;*/
+}
+ul#navi_containTab3{
+	list-style:none;
+	padding:0;
+	margin:0;	
+	width:100%;
+	margin-left:0px;
+	height:30px;
+}
+ul#navi_containTab3 li.active{
+		display:block;
+	float:left;
+	height:30px;	
+	padding-left:15px;
+	padding-right:15px;  /* กำหนดความกว้างทั้งหมด  หารด้วยจำนวนเมนูแท็บ  */
+	/*border:0px solid #CCC;*/
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	/*border-top-left-radius:5px;
+	border-top-right-radius:5px;*/
+	background: #eef0f0;
+	margin-right:5px;
+	color: #333;
+	font-size:20px;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	font-family:true-thai;
+	/*text-shadow: #999 1px 1px 0px;*/
+	}
+ul#navi_containTab3 li{
+	display:block;
+	float:left;
+	height:30px;	
+	padding-left:15px;
+	padding-right:15px;  /* กำหนดความกว้างทั้งหมด  หารด้วยจำนวนเมนูแท็บ  */
+	/*border:0px solid #CCC;*/
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	/*border-top-left-radius:5px;
+	border-top-right-radius:5px;*/
+	background: #1896d3;
+	margin-right:5px;
+	
+	color:#fff;
+	font-size:20px;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	font-family:true-thai;
+	/*text-shadow: #999 1px 1px 0px;*/
+}
+ul#navi_containTab3 li:hover{
+	border-top: #47aadd 3px solid;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+	}
+	
+
+/* class รูปแบบของแต่ละเมนู */
+#navi_containTab3 .tabNavi1{
+	/*background-color:#fde3c4;	*/
+}
+#navi_containTab3 .tabNavi2{
+	/*background-color:#fee8cc;	*/	
+}
+
+
+ul#detail_containTab3{
+	list-style:none;
+	padding:0;
+	margin:0;	
+	width:100%;	
+}
+ul#detail_containTab3 li{
+	float:left;
+	width:100%;
+	padding:5px;
+	/*border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius:10px;
+	border-top-left-radius: 10px;*/
+}
+ul#detail_containTab3 li a{color: ;}
+ul#detail_containTab3 li a:hover{color:#333;}
+ul#detail_containTab3 li img{border:none; margin:0px;}
+/* class รูปแบบของแต่ละเนื้อหา */
+ul#detail_containTab3 .detailContent1{
+background: #eef0f0;
+	display:block;
+}
+ul#detail_containTab3 .detailContent2{
+background: #eef0f0;
+	display:none;
+}

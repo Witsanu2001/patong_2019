@@ -1,0 +1,178 @@
+<?
+include ('connect.php');
+session_start();
+
+if(!isset($_SESSION['user'])) {
+	header('Location: index.php');
+	die();
+}
+
+
+$user=$_SESSION['user'];
+
+	$sql="select * from tb_user where user_name='$user' ";
+	$result=mysql_db_query($dbname,$sql);
+	$r=mysql_fetch_array($result);
+	
+	$id = $r['user_id'];
+	$class= $r['user_class'];
+	
+?>
+<div class="row">
+<div class="col-md-4">
+<h2 style="color:#00bff3"><img src="../images/cpicon.png" width="50" height="50" /> Control Panel</h2>
+</div>
+<div class="col-md-8" style="text-align:right; line-height: 30px; color:white;">
+  <form method="post" action="logout.php" >
+ <span class="glyphicon glyphicon-user"></span> ยินดีต้อนรับคุณ : <b><?=$_SESSION[user];?></b> <input type="submit" value="ออกจากระบบ" onClick="return confirm('คุณต้องการออกจากระบบจริงหรือไม่')" class="btn btn-default btn-xs" />
+  | <a href="../index.php" target="_blank">เรียกดูเว็บไซต์ </a>
+  </form>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="cp.php">Patong Hospital</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      <!--<li><a href="cp-page.php?id_edit=2">วันเวลาตรวจคลีนิกทั่วไป</a></li>-->
+      
+      <? if($class==a){
+		  echo'
+		  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการหน้า / อื่นๆ <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-page.php?id_edit=1">รู้จักองค์กร</a></li>
+            <li><a href="cp-page.php?id_edit=3">ติดต่อเรา</a></li>
+			<li role="presentation" class="divider"></li>
+			<li><a href="cp-page.php?id_edit=6">ตารางตรวจแพทย์</a></li>
+			<li><a href="cp-page.php?id_edit=7">ตารางตรวจทันตแพทย์</a></li>
+			<li><a href="cp-page.php?id_edit=8">งานบริการ</a></li>
+			<li role="presentation" class="divider"></li>
+			<li><a href="cp-page.php?id_edit=4">ลิงค์หน่วยงานที่เกี่ยวข้อง</a></li>
+			<li><a href="cp-page.php?id_edit=5">แบนเนอร์ด้านบน</a></li>
+          </ul>
+        </li>
+		
+		  ';
+	  }
+	  ?>
+      
+      <?
+      if($class==a){
+		  echo'
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการข่าว/บทความ <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-news.php?type=1">จัดการข่าวประชาสัมพันธ์</a></li>
+            <li><a href="cp-news.php?type=2">จัดการบทความ</a></li>
+            <li><a href="cp-news.php?type=3">จัดการสาระน่ารู้</a></li>
+          </ul>
+        </li>
+		';} else  if($class==c){
+		  echo'
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการข่าว/บทความ <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-news.php?type=1">จัดการข่าวประชาสัมพันธ์</a></li>
+            <li><a href="cp-news.php?type=2">จัดการบทความ</a></li>
+            <li><a href="cp-news.php?type=3">จัดการสาระน่ารู้</a></li>
+          </ul>
+        </li>
+		';}
+		?>
+        
+        <?
+		  if($class==a){
+			  echo'
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการจัดซื้อจัดจ้าง <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-article.php?type=4">จัดซื้อจัดจ้าง</a></li>
+            <li><a href="cp-article.php?type=5">ประกาศผล</a></li>
+          </ul>
+        </li>
+		';
+		  } else if($class==b){
+			  echo'
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการจัดซื้อจัดจ้าง <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-article.php?type=4">จัดซื้อจัดจ้าง</a></li>
+            <li><a href="cp-article.php?type=5">ประกาศผล</a></li>
+          </ul>
+        </li>
+		';
+		  }
+		
+		?>
+        
+        <?
+		if ($class==a){
+			echo'
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการจัดรับสมัครงาน <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-article.php?type=6">รับสมัครงาน</a></li>
+            <li><a href="cp-article.php?type=7">ประกาศผล</a></li>
+          </ul>
+        </li>
+		';
+		} else if ($class==d){
+			echo'
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการจัดรับสมัครงาน <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-article.php?type=6">รับสมัครงาน</a></li>
+            <li><a href="cp-article.php?type=7">ประกาศผล</a></li>
+          </ul>
+        </li>
+		';
+		}
+		
+		?>
+        
+        <? 
+		if ($class==a){
+			echo'
+        
+        <li><a href="cp-article.php?type=8">จัดการดาวน์โหลด</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">จัดการคลังภาพ <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-gallery-group.php">หมวดภาพ</a></li>
+            <li><a href="cp-gallery.php">รูปภาพ</a></li>
+          </ul>
+        </li>
+		';
+		} else if ($class==e){
+			echo'
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">ITA <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp-tt.php?type=9">ITA</a></li>
+            
+          </ul>
+        </li>
+		';
+		}
+        
+		?>
+        
+        <li><a href="cp-user.php">จัดการผู้ใช้</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

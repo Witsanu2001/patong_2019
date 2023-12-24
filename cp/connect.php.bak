@@ -1,0 +1,37 @@
+<?php
+$objConnect = mysql_connect("localhost","root","12345678") or die (mysql_error());
+$objDB = mysql_select_db("patong2015");
+mysql_query("SET NAMES utf8" , $objConnect);
+$dbname = "patong2015";
+
+foreach ($_GET as $key => $value) 
+{
+	$_GET[$key] = str_replace("'","",$value);
+	$_GET[$key] = str_replace("DELETE","",$value);
+	$_GET[$key] = str_replace("SELECT","",$value);
+	$_GET[$key] = str_replace("INSERT","",$value);
+	$_GET[$key] = str_replace("SHUTDOWN","",$value);
+	$_GET[$key] = str_replace("UPDATE","",$value);
+	$_GET[$key] = str_replace("EXEC","",$value);
+	$_GET[$key] = str_replace("SHELL","",$value);
+	$_GET[$key] = str_replace("\""," ",$value);
+	$_GET[$key] = str_replace(""," ",$value);
+        $_GET[$key] = mysql_escape_string($_GET[$key]);
+
+}
+
+foreach ($_POST as $key => $value) 
+{
+	$_POST[$key] = str_replace("'","",$value);
+	$_POST[$key] = str_replace("DELETE","",$value);
+	$_POST[$key] = str_replace("SELECT","",$value);
+	$_POST[$key] = str_replace("INSERT","",$value);
+	$_POST[$key] = str_replace("SHUTDOWN","",$value);
+	$_POST[$key] = str_replace("UPDATE","",$value);
+	$_POST[$key] = str_replace("EXEC","",$value);
+	$_POST[$key] = str_replace("SHELL","",$value);
+	$_POST[$key] = str_replace("\"","",$value);
+	$_POST[$key] = str_replace(""," ",$value);
+        $_POST[$key] = mysql_escape_string($_POST[$key]);
+}
+?>

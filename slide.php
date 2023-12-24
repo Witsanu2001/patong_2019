@@ -1,0 +1,1 @@
+<div class="slide"><iframe src="./slide/slider.php" width="990" height="310" align="middle" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
